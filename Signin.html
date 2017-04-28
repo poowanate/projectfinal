@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="image/ico/favicon.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/signin.css">
+</head>
+
+<body>
+  <div id="app">
+  <nav class="navbar navbar-default w3l aits wow bounceInUp agileits w3layouts">
+            <div class="container">
+
+                <div class="navbar-header agileits w3layouts">
+                    <button type="button" class="navbar-toggle agileits w3layouts collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                        <span class="sr-only agileits w3layouts">Toggle navigation</span>
+                        <span class="icon-bar w3l"></span>
+                        <span class="icon-bar aits"></span>
+                        <span class="icon-bar w3laits"></span>
+                    </button>
+<a class="navbar-brand" href="index.html"><img src="image/icon.png" style="height: 30px; width: 150px;"></a>
+                </div>
+                
+
+                <div id="navbar" class="navbar-collapse agileits w3layouts navbar-right collapse">
+<div class="navbar-header agileits w3layouts">
+
+            </div>
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                <li class="active"><a href="Signup.html">Sign up</a></li>
+                        <li class="active"><a href="Signin.html">Login</a></li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    <div class="container">
+     
+      <div class="wrapper">
+        <form id="form" class="well form-horizontal " action="" method="POST" role="form">
+          <center>
+            <h2 class="form-signin-heading">Login to the system</h2></center>
+          <div class="form-group">
+  <label class="col-md-4 control-label" for="username">Username</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+   <input type="text" class="form-control" id="username" name="username" placeholder="Username has max 12" maxlength="12" autofocus>
+    </div>
+  </div>
+</div>
+          <div class="form-group">
+  <label class="col-md-4 control-label"  for="password" >Password</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+  <input type="password" class="form-control" id="password" name="password" placeholder="Password has max length to 12" maxlength="12">
+    </div>
+  </div>
+</div>
+         <div class="form-group">
+  <label class="col-md-4 control-label"  ></label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <div class="checkbox">
+              <label><input type="checkbox" name="remember"> Remember Me</label>
+            </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-1">
+   <button type="submit" id="signin" name="button" onclick="create()" class="btn  btn-primary btn-block ">Login</button>
+  </div>
+  
+</div>
+            
+           
+            
+        </form>
+       
+        </div>
+        <div id="err" style="display:none" class="alert alert-danger alert-dismissable fade in">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+          <strong>Incorrect username or password</strong><br>
+          <span style="color:blue;font-weight:bold" id="summary"></span>
+        </div>
+        <div id="suc" style="display:none" class="alert alert-success alert-dismissable fade in">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+          <strong>Login Successful!!!</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<!-- Text input-->
+
+
+
+
+  
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/cache.js"></script>
+  <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="js/singins.js"></script>
+  <script type="text/javascript" src="js/jquery.cookie.js"></script>
+  <script type="text/javascript">
+    function create() {
+      $.cookie('keep', 'user data');
+      console.log($.cookie('keep'));
+    }
+  </script>
+</body>
+
+</html>
